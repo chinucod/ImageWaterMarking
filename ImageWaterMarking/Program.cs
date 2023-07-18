@@ -12,12 +12,12 @@ namespace ImagewaterMarking
     {
         static void Main(string[] args)
         {
-            string mainDirectory = "I:\\My Drive\\SVS Sarees";
+            string mainDirectory = "G:\\My Drive\\Random Sarees\\";
             char foldersStartsWith = 'K';
             char foldersStartsWith1 = 'H';
 
 
-            string encodedFolderName = "I:\\My Drive\\SVS Sarees\\";
+            string encodedFolderName = "G:\\My Drive\\SVS Sarees\\";
 
             string fileExtenstion = ".jpg";
 
@@ -37,7 +37,8 @@ namespace ImagewaterMarking
                             {
                                 Path = p,
                                 Name = Path.GetFileName(p)
-                            }).Where(p => p.Name.StartsWith(foldersStartsWith) || p.Name.StartsWith(foldersStartsWith1))
+                            })
+                            //.Where(p => p.Name.StartsWith(foldersStartsWith) || p.Name.StartsWith(foldersStartsWith1))
                             .ToArray();
             int i = 0;
             foreach (var a in subdirs1)
